@@ -1,14 +1,30 @@
-{% extends 'base.html'%}
+{% extends 'base.html'%} {% block head %}
 
-{% block head %}
+<title>Home</title>
 
-<title> Home</title>
-
-{% endblock %}
-
-
-{% block body %} 
+{% endblock %} {% block body %}
 
 <h1>Home Page</h1>
+<br />
+
+<main role="main">
+  <div class="jumbotron">
+    <div class="col-sm-8 mx-auto">
+      <h1>Welcome !!</h1>
+      <p>Welcome to Zidaan's Blog. Here all we do is talk about Computers.</p>
+      <p>
+        Checkout more of my projects at
+        <a href="/docs/4.4/examples/navbar-static/">GitHub</a> and to Contact me
+        via LinkedIn Click <a href="/docs/4.4/examples/navbar-fixed/">Here</a>!!
+        Thanks.
+      </p>
+      <p>
+        <a class="btn btn-primary" href="/posts" role="button"
+          >Go to Posts &raquo;</a
+        >
+      </p>
+    </div>
+  </div>
+</main>
 
 {% endblock %}

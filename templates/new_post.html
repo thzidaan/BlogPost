@@ -1,22 +1,23 @@
 {% extends 'base.html'%} {% block head %}
 
-<title>Edit Posts</title>
+<title>New Post</title>
 
 {% endblock %} {% block body %}
 
 <hr />
 
-<h2>Edit:</h2>
+<h2>New Post:</h2>
 
 <hr />
-<form action="/posts/edit/{{post.id}}" method="POST">
+
+<form action="/posts" method="POST">
   <label for="title">Title:</label>
   <input
     class="form-control"
     type="text"
     name="title"
     id="title"
-    value="{{post.title}}"
+    placeholder="Enter Title"
     aria-label="Enter Title"
   />
   <br />
@@ -26,7 +27,7 @@
     type="text"
     name="author"
     id="author"
-    value="{{post.author}}"
+    placeholder="Enter Author"
     aria-label="Enter Author"
   />
   <br />
@@ -35,13 +36,12 @@
     class="form-control"
     name="content"
     id="content"
+    placeholder="Enter Content"
     aria-label="Enter Content"
     rows="3"
-  >
-{{post.content}}</textarea
-  >
+  ></textarea>
   <br />
-  <input type="submit" value="Save" />
+  <input type="submit" value="Post" />
 </form>
 
 <hr />
